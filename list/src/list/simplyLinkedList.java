@@ -32,4 +32,19 @@ public class simplyLinkedList {
 			return nextNode;
 		}
 	}
+	
+	public node search(String fruit) {
+		if (header == null) {
+			return null;
+		} else {
+			node nextNode = header;
+			while (nextNode != null) {
+				if (nextNode.get_fruit() == fruit) {
+					return nextNode;
+				}
+				nextNode = nextNode.get_next();
+			}
+			return nextNode; 
+		}
+	}
 }
