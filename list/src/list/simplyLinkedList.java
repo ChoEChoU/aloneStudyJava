@@ -2,6 +2,7 @@ package list;
 
 public class simplyLinkedList {
 	private node header = null;
+	private node tail = null;
 	private int size = 0;
 	
 	public simplyLinkedList() {
@@ -15,11 +16,8 @@ public class simplyLinkedList {
 			header = newNode;
 		}
 		else {
-			node tempNode = header;
-			while (tempNode.get_next() != null) {
-				tempNode = tempNode.get_next();
-			}
-			tempNode.set_next(tempNode);
+			tail.set_next(newNode);
 		}
+		tail = newNode;
 	}
 }
