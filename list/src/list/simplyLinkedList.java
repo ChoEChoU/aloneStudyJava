@@ -22,7 +22,7 @@ public class simplyLinkedList {
 	}
 	
 	public node get_at(int index) {
-		if (header == null) {
+		if (index >= size) {
 			return null;
 		} else {
 			node nextNode = header;
