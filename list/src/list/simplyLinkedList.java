@@ -47,4 +47,25 @@ public class simplyLinkedList {
 			return nextNode; 
 		}
 	}
+	
+	public void delete_at(int index) {
+		if (header != null) {
+			node prev = null;
+			node current = header;
+			for (int i = 0; i < index; i++) {
+				prev = current;
+				current = current.get_next();
+			}
+			if (current == header) {
+				header = current.get_next();
+			}
+			else {
+				prev.set_next(current.get_next());
+			}
+			if (current == tail) {
+				tail = prev;
+			}
+			size--;
+		}	
+	}
 }
