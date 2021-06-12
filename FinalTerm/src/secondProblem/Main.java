@@ -36,6 +36,30 @@ public class Main {
 			System.out.println("업무 성적: " + array.get(i).getScore());
 		}
 		
+		System.out.println("=========================");
+		System.out.print("직원 이름이나 사번 입력 >>");
+		
+		String input = scan.next();
+		
+		while (!input.equals("quit")) {
+			for (int i = 0; i < array.size(); i++) {
+				if (input.equals(array.get(i).getName())) {
+					System.out.println(array.get(i).getName() + "의 업무 성적: " + array.get(i).getScore());
+				}
+				else if (input.equals(array.get(i).getId())) {
+					System.out.println("이름: " + array.get(i).getName());
+					System.out.println("부서: " + array.get(i).getDepartment());
+					System.out.println("사번: " + array.get(i).getId());
+					System.out.println("직책: " + array.get(i).getPosition());
+					System.out.println("업무 성적: " + array.get(i).getScore());
+				}
+			}
+			System.out.println("=========================");
+			System.out.print("직원 이름이나 사번 입력 >>");
+			
+			input = scan.next();
+		}
+		
 		scan.close();
 	}
 
